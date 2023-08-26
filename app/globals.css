@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base styles */
+main {
+  @apply mt-20;
+}
+
 /* Common sytyles */
 .wrapper {
   @apply container mx-auto px-5 md:px-0;
@@ -23,4 +28,9 @@
 }
 .link-item:hover::after {
   @apply w-full;
+}
+
+/* Typhography */
+.headline-1 {
+  @apply text-8xl;
 }
