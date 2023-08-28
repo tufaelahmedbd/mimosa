@@ -1,17 +1,17 @@
-import Navbar from "@/components/shared/Navbar";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Bai_Jamjuree } from "next/font/google";
-import Footer from "@/components/shared/Footer";
-import { cn } from "@/lib/utils";
+import Navbar from '@/components/shared/Navbar';
+import './globals.css';
+import type { Metadata } from 'next';
+import { Bai_Jamjuree } from 'next/font/google';
+import Footer from '@/components/shared/Footer';
+import { cn } from '@/lib/utils';
 
 const bai_Jamjuree = Bai_Jamjuree({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
-  title: "Mimosa | Home",
+  title: 'Mimosa | Home',
 };
 
 export default function RootLayout({
@@ -20,13 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
-        className={cn(bai_Jamjuree.className, "bg-light text-dark antialiased")}
+        className={cn(bai_Jamjuree.className, 'bg-light text-dark antialiased')}
       >
         <Navbar />
         {children}
-        <Footer />{" "}
+        <Footer />{' '}
       </body>
     </html>
   );
