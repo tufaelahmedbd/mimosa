@@ -32,5 +32,5 @@ main {
 
 /* Typhography */
 .headline-1 {
-  @apply text-8xl;
+  @apply text-9xl;
 }

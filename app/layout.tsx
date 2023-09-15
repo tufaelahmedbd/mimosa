@@ -1,9 +1,8 @@
-import Navbar from '@/components/shared/Navbar';
-import './globals.css';
 import type { Metadata } from 'next';
 import { Bai_Jamjuree } from 'next/font/google';
-import Footer from '@/components/shared/Footer';
 import { cn } from '@/lib/utils';
+import MasterProvider from '@/providers/MasterProvider';
+import './globals.css';
 
 const bai_Jamjuree = Bai_Jamjuree({
   subsets: ['latin'],
@@ -12,6 +11,7 @@ const bai_Jamjuree = Bai_Jamjuree({
 
 export const metadata: Metadata = {
   title: 'Mimosa | Home',
+  description: 'A beauty salon and spa website',
 };
 
 export default function RootLayout({
@@ -24,9 +24,7 @@ export default function RootLayout({
       <body
         className={cn(bai_Jamjuree.className, 'bg-light text-dark antialiased')}
       >
-        <Navbar />
-        {children}
-        <Footer />{' '}
+        <MasterProvider>{children}</MasterProvider>
       </body>
     </html>
   );
